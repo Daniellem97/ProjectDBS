@@ -111,6 +111,7 @@ if ($numOfItems > 0)  {
 
 	echo '<div>';
 	echo '	<p class="center">';
+	echo '		Order Total: ' . $currency . '<span id="orderTotal"></span>';
 	echo '	</p>';
 	echo '</div>';
 	echo '<br> <input type="Submit" value="Submit Order" class="button">';
@@ -129,4 +130,55 @@ $conn->close();
 		<h5>&copy; 2021, Danielle Murphy. 10553937 All rights reserved.</h5>
 	</div>
 </body>
+</html>
+	
+	<script>
+		/* Initialize order total. */
+		document.getElementById("orderTotal").innerHTML = "0.00";
+<?php
+    echo 'var itemTotals = new Array(' . $numOfItems . ');'
+?>
+		var i;
+		for (i = 0; i < itemTotals.length; i++) {
+			itemTotals[i]=0.00;
+		}
+		/* Function to calculate order total */
+		function calculateOrderTotal() {
+			var orderTotal = 0.00;
+			var i;
+			for (i = 0; i < itemTotals.length; i++) {
+				orderTotal += itemTotals[i];
+			}
+			return orderTotal;
+		}
+		/* Function to reset form */
+		function resetForm() {
+			document.getElementById("orderForm").reset();
+			document.getElementById("orderTotal").innerHTML = "0.00";
+			var i;
+			for (i = 0; i < itemTotals.length; i++) {
+			  itemTotals[i] = 0.00;
+			}
+		}
+		/* Function to update order total when quantities change */
+		function updateTotal(itemNo, quantity, price) {
+			var amount = quantity * price;
+			itemTotals[itemNo] = amount;
+			var totalAmount = calculateOrderTotal().toFixed(2);
+			document.getElementById("orderTotal").innerHTML = totalAmount;
+		}
+		function updateQuantity() {
+			alert('updated.');
+ 		var Quantity: <input name="NewQuantitys[]" type="number" value="1";
+
+		}
+		/* Function to validate the order amount */
+		function validateOrder() {
+			if (calculateOrderTotal() & <= 0.0) {
+				alert('Please select at least one item to buy.');
+				return false;
+			}
+		}
+	</script>
+</body> 
 </html>
