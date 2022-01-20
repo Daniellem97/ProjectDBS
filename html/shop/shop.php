@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Products</title>
+<title>Shop/Appointments</title>
 <link rel="stylesheet" href="css/styles.css">
 <link rel="stylesheet" href="css/menu.css">
 </head>
