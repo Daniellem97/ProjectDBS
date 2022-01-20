@@ -14,16 +14,14 @@
 	</div>
 	<br>
 	<?php
-		// Get the application environment parameters from the Parameter Store.
 		include ('getAppParameters.php');
-
-		// Display the server metadata information if the showServerInfo parameter is true.
-		include('serverInfo.php');
 	?>
 	<hr>
 	<div class="topnav">
-		<a href="index.php">Home</a> <a href="shop.php">Shop/Appointment</a> <a
-			href="orderHistory.php">Order History</a>
+		<a href="index.php">Home</a> 
+		<a href="shop.php">Shop/Appointment</a>
+		<a href="tutorial.php">Tutorial</a>
+		<a href="orderHistory.php">Order History</a>
 	</div>
 
 	<hr>
