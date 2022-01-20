@@ -57,7 +57,7 @@ if ($numOfItems > 0) {
 	    $price = number_format($row["price"], 2);
 	    echo '	<div class="column">';
 	    echo '			<div class="card">';
-	    echo '				<img src="' . $row["image_url"] . '" style="width: 50px>';
+	    echo '				<img align="middle" src="' . $row["image_url"] . '" style="width: 50px>';
 	    echo '				<div class="container">';
 	    echo '					<h2 class="productTitle">' . $row["product_name"] . '</h2>';
 	    echo '					<p class="center">' . $currency . $price . '</p>';
