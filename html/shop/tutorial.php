@@ -92,7 +92,7 @@ if ($numOfItems > 0)  {
 
 	    echo '	<div class="column">';
 	    echo '			<div class="card">';
-	    echo '				<img src="' . $row["image_url"] . '" style="width: 10%">';
+	    echo '				<img align+"right" src="' . $row["image_url"] . '" style="width: 50%">';
 	    echo '				<div class="container">';
 	    echo '					<h2 class="productTitle">' . $row["product_name"] . '</h2>';
 	    echo '					<p class="center">' . $currency . $price . '</p>';
