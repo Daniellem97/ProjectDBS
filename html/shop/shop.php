@@ -90,7 +90,7 @@ $result = $conn->query($sql);
 $numOfItems = $result->num_rows;
 if ($numOfItems > 0) {
     // Display each returned item in a form.
-	echo '<form id="orderForm" action="processAppointment.php" method="post" onsubmit="return validateOrder()">';
+	echo '<form id="orderForm" action="processAppointment.php" method="post" >';
 	$previousBookingGroupNumber = 0;
 	// output data of each row
 	while($row = $result->fetch_assoc()) {
@@ -188,12 +188,7 @@ $conn->close();
 		}
 
 
-		function validateOrder() {
-
-			if (calculateOrderTotal() <= 0.0) {
-				alert('Please select at least one item to buy.');
-				return false;
-			}
+	
 		}
 	</script>
 
