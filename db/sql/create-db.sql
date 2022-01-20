@@ -83,6 +83,7 @@ INSERT INTO booking_group (booking_group_number, booking_group_name) VALUES
 CREATE TABLE bookings (
   bookings_id INT(3) NOT NULL AUTO_INCREMENT PRIMARY KEY,
   booking_name VARCHAR(40) NOT NULL DEFAULT '',
+  bprice INT (1) NOT NULL,	
   start_date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   booking_group INT(2) NOT NULL DEFAULT 1,
   FOREIGN KEY (booking_group) REFERENCES booking_group (booking_group_number)
@@ -90,16 +91,16 @@ CREATE TABLE bookings (
 
 /* INSERT initialization data into the BOOKINGS table. */
 
-INSERT INTO bookings (booking_name, start_date, booking_group) VALUES
-	  ('Today 12:00', DEFAULT, 1)
-	, ('Today 12:30', DEFAULT, 1)
-	, ('Today 13:00', DEFAULT, 1)
-	, ('Today 13:30', DEFAULT, 1)
-	, ('Today 14:00', DEFAULT, 1)
-        , ('Today 14:30', DEFAULT, 1)
-	, ('Today 15:00', DEFAULT, 1)
-	, ('Today 15:30', DEFAULT, 1)
-	, ('Today 16:00', DEFAULT, 1);
+INSERT INTO bookings (booking_name, start_date, booking_group, bprice) VALUES
+	  ('Today 12:00', DEFAULT, 1, 0)
+	, ('Today 12:30', DEFAULT, 1, 0)
+	, ('Today 13:00', DEFAULT, 1, 0)
+	, ('Today 13:30', DEFAULT, 1, 0)
+	, ('Today 14:00', DEFAULT, 1, 0)
+        , ('Today 14:30', DEFAULT, 1, 0)
+	, ('Today 15:00', DEFAULT, 1, 0)
+	, ('Today 15:30', DEFAULT, 1, 0)
+	, ('Today 16:00', DEFAULT, 1, 0);
 
 
 
