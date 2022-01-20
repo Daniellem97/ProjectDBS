@@ -62,7 +62,7 @@ if ($numOfItems > 0) {
 	    echo '					<input type="hidden" name="productName[]" value="' . $row["product_name"] . '">';
 	    echo '					<input type="hidden" name="price[]" value=' . $price . '>';
 	    echo '					<div class="center">';
-	    echo '				        Quantity: <input name="quantity[]" type="number" min="0" max="15" value="0" maxlength="2" onchange="updateTotal(' . $row["id"] . ', this.value, ' . $price . ')">';
+	    echo '						Quantity: <input name="quantity[]" type="number" min="0" max="15" value="0" maxlength="2" onchange="updateTotal(' . $row["id"] . ', this.value, ' . $price . ')">'. $row["id"] . ', this.value, ' . $price . ')">';
 	    echo '					</div>';
 	    echo '					<br>';
 	    echo '				</div>';
