@@ -14,16 +14,14 @@
 	</div>
 	<br>
 	<?php
-		// Get the application environment parameters from the Parameter Store.
 		include ('getAppParameters.php');
 
-		// Display the server metadata information if the showServerInfo parameter is true.
-		include('serverInfo.php');
 	?>
 	<hr>
 	<div class="topnav">
 		<a href="index.php">Home</a>
-		<a href="shop.php">Shop</a>
+		<a href="shop.php">Shop/Appointments</a>
+		<a href="tutorial.php">Tutorials</a>
 		<a href="orderHistory.php" class="active">Order History</a>
 	</div>
 
@@ -100,7 +98,7 @@ if ($result->num_rows > 0) {
 
 } else {
 
-    echo '<p class="center">You have no orders at this time.</p>';
+    echo '<p class="center">There are currently no orders.</p>';
 }
 
 // Close the last table division.
