@@ -40,7 +40,7 @@ INSERT INTO product (product_name, description, price, product_group, image_url)
 	, ('Styrofoam Wreath', '27cm Stryofoam Wreath', 1.99, 1, 'images/swreath.jpg')
 	, ('Filler Bouquet', '10 heads Green/Yellow Filler Bouquet', 2.32, 2, 'images/fillerbouquet.jpg')
 	, ('Lily Filler Bouquet', 'White Lily Filler Bouquet', 1.40, 2, 'images/lilyfiller.jpg')
-    , ('Purple Filler', '10 head Purple Artificial Filler', 2.32, 2, 'images/pfiller.jpg')
+    , ('Purple Filler', '10 head Purple Artificial Filler', 2.32, 2, 'images/purplefiller.jpg')
 	, ('Rose Bud Bouquet', '36 Flowers Green Rose Bud Bouquet', 16.42, 2, 'images/rosebud.jpg')
 	, ('Eucalyptus ', 'Bouquet of Artifical Eucalyptus', 5.00, 2, 'images/eucalyptus.jpg')
 	, ('Sunflower', 'Bouquet of 7 head Sunflowers', 3.90, 2, 'images/sunflower.jpg');
