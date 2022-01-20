@@ -168,13 +168,17 @@ $conn->close();
 			  itemTotals[i] = 0.00;
 			}
 		}
+		
 		/* Function to update order total when quantities change */
+
 		function updateTotal(itemNo, quantity, price) {
+
 			var amount = quantity * price;
 			itemTotals[itemNo] = amount;
 			var totalAmount = calculateOrderTotal().toFixed(2);
 			document.getElementById("orderTotal").innerHTML = totalAmount;
-		}
+                 }
+		
 		function updateQuantity() {
 			alert('updated.');
  		var Quantity: <input name="NewQuantitys[]" type="number" value="1";
