@@ -99,8 +99,7 @@ for ($i = 0; $i < sizeof($amounts); $i++) {
 
 $conn->close();
 ?>
-	<p class="center">Thank for your order! It will be available for pickup
-		within 15 minutes. Your order number and details are shown below.</p>
+	<p class="center">Thank you for shopping with Evergreen Silk Plants! Your order will be ready for collection within 1 hour.</p>
 
 <?php
 
