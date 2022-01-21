@@ -45,7 +45,7 @@ if ($conn->connect_error) {
 
 $BookingIds = $_POST["booking_Id"];
 $BookingNames = $_POST["BookingName"];
-$quantities = $_POST["NewQuantitys"];
+$quantitys = $_POST["itemQuantity"];
 $start_date = $_POST["AppointmentDate"];
 $totalAmount = 0.00;
 $amounts = 1;
@@ -71,7 +71,7 @@ for ($i = 0; $i < sizeof($BookingNames); $i++) {
     if ($totalAmount = 0.00) {
 
         $sql = "INSERT INTO appointment_item (appointment_number, appointment_item_number, bookings_id, bquantity)
-                       VALUES ($orderNumber, $itemNo, $booking_Id, $quantities);";
+                       VALUES ($orderNumber, $itemNo, $booking_Id, $quantitys);";
 
         if ($conn->query($sql) === TRUE) {
             $itemNo += 1;
@@ -93,7 +93,7 @@ $conn->close();
 echo  '</tr>';
 	
 
- echo '<b>Quantity: ' . $NewQuantities[$i] . 'Booking: ' . $BookingNames[$i] . '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Order Number: ' . $orderNumber . '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Date: ' . substr($currentTimeStamp, 0, 10)
+ echo '<b>Quantity: ' . $itemQuantity[$i] . 'Booking: ' . $BookingNames[$i] . '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Order Number: ' . $orderNumber . '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Date: ' . substr($currentTimeStamp, 0, 10)
 . '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Time booking was made: ' . substr($currentTimeStamp, 11, 8) . '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Total Amount: ' . $currency . number_format($totalAmount, 2) . '</b>';		
 for ($i = 0; $i < $amounts; $i++) {
 
