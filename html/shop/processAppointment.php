@@ -99,7 +99,7 @@ for ($i = 0; $i < $amounts; $i++) {
 
  foreach ($BookingnNames[$i] as $BookingNames[$i])
  {
-	 if ($quantities[$i] == 1) {
+	 if ($total[$i] == 1) {
 		 
  echo '<b>Booking: ' . $BookingNames[$i] . '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Order Number: ' . $orderNumber . '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Date: ' . substr($currentTimeStamp, 0, 10)
 . '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Time booking was made: ' . substr($currentTimeStamp, 11, 8) . '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Total Amount: ' . $currency . number_format($totalAmount, 2) . '</b>';
