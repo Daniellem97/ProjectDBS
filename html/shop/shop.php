@@ -114,7 +114,7 @@ if ($numOfItems > 0) {
 	    echo '					<br>';
 	    echo 					"This appointment is for " . date("Y/m/d") . "<br>";
 	    echo '					<input type="hidden" name="bookings_Id[]" value="' . $row["id"] . '">';
-	    echo '					<input type="hidden" name="BookingName[]" value="' . $row["booking_name"] . '">';
+	    echo '					<input type="hidden" name="BookingName" value="' . $row["booking_name"] . '">';
 	    echo '					<div class="center">';
             echo '					<br>';
  	    echo '						Quantity: <input name="quantitys[]" type="number" min="0" max="1" value="0" maxlength="1" onchange="updateQuantity(' . $row["id"] . ', this.value, ' . $quantitys . ')">';
@@ -174,9 +174,8 @@ $conn->close();
 			var totalAmount = calculateOrderTotal().toFixed(2);
 			document.getElementById("orderTotal").innerHTML = totalAmount;
 		}
-		function updateQuantity(quantitys) {
-			var totalQuantities = quantitys * 1;
-			itemQuantity = totalQuantities;
+		function confirmAppointment() {
+			alert('your appointment is for $booking_name');
 		}
 
 		function validateOrder() {
