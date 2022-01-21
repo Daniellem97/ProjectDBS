@@ -81,7 +81,7 @@ if ($numOfItems > 0) {
     echo '<br><p class="center">There are no items on the product list.</p>';
 }
 	
-$sql = "SELECT a.bookings_id, a.booking_name, a.start_date, a.aprice, b.booking_group_number, b.booking_group_name
+$sql = "SELECT a.bookings_id, a.booking_name, a.start_date, b.booking_group_number, b.booking_group_name
         FROM bookings a, booking_group b
         WHERE b.booking_group_number = a.booking_group
         ORDER BY b.booking_group_number, a.bookings_id";
