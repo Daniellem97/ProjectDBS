@@ -107,6 +107,7 @@ if ($numOfItems > 0) {
 	    echo '			<div class="card">';
 	    echo '				<div class="container">';
 	    echo '					<h2 class="bookingTitle">' . $row["booking_name"] . '</h2>';
+            echo '					<p class="center">' . $currency . $price . '</p>';
 	    echo '					<br>';
 	    echo 					"This appointment is for " . date("Y/m/d") . "<br>";
 	    echo '					<input type="hidden" name="bookings_Id[]" value="' . $row["id"] . '">';
