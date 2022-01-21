@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Caf&eacute; Order History</title>
+<title>Order History</title>
 <link rel="stylesheet" href="css/styles.css">
 </head>
 
