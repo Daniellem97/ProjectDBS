@@ -40,6 +40,7 @@ $numOfItems = $result->num_rows;
 if ($numOfItems > 0) {
     // Display each returned item in a form.
 	echo '<form id="orderForm" action="processOrder.php" method="post">';
+		echo '<form id="orderForm" action="processOrder.php" method="post" onsubmit="return validateOrder()">';
 	$previousProductGroupNumber = 0;
 	// output data of each row
 	while($row = $result->fetch_assoc()) {
@@ -90,6 +91,11 @@ $numOfItems = $result->num_rows;
 if ($numOfItems > 0) {
     // Display each returned item in a form.
 	echo '<form id="orderForm" action="processAppointment.php" method="post" >';
+        echo '<form id="orderForm" action="processAppointment.php" method="post" onsubmit="return updateQuantitys()">';
+	
+	echo '<br> <br> <input type="Reset" value="Reset Order" class="button" onclick="resetForm()">';
+
+	
 	$previousBookingGroupNumber = 0;
 	// output data of each row
 	while($row = $result->fetch_assoc()) {
