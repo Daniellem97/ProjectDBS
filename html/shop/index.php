@@ -10,7 +10,7 @@
 
 	<div id="header" class="mainHeader">
 		<hr>
-		<div class="center">Evergreen Silk Plantss</div>
+		<div class="center">Evergreen Silk Plants</div>
 	</div>
 	<br>
 	<?php
