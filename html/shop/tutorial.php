@@ -57,7 +57,7 @@ if ($conn->connect_error) {
 
 $sql = "SELECT a.id, a.product_name, a.description, a.price, b.product_group_number, b.product_group_name, a.image_url 
         FROM product a, product_group b
-        WHERE b.product_group_number = a.product_group AND a.price = 4.90 OR b.product_group_number = a.product_group AND a.price = 1.40 OR b.product_group_number = a.product_group AND a.price = 3.90
+        WHERE b.product_group_number = a.product_group AND a.price = 1.99 OR b.product_group_number = a.product_group AND a.price = 2.32 OR b.product_group_number = a.product_group AND a.price = 3.90
         ORDER BY b.product_group_number, a.id";
 
 $result = $conn->query($sql);
