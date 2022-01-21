@@ -1,6 +1,3 @@
-/*
-	Database Creation Script for the cafe database
-*/
 DROP DATABASE IF EXISTS shop_db;
 
 CREATE DATABASE shop_db;
@@ -91,16 +88,16 @@ CREATE TABLE bookings (
 
 /* INSERT initialization data into the BOOKINGS table. */
 
-INSERT INTO bookings (booking_name, start_date, booking_group, bprice) VALUES
-	  ('Today 12:00', DEFAULT, 1, 0)
-	, ('Today 12:30', DEFAULT, 1, 0)
-	, ('Today 13:00', DEFAULT, 1, 0)
-	, ('Today 13:30', DEFAULT, 1, 0)
-	, ('Today 14:00', DEFAULT, 1, 0)
-        , ('Today 14:30', DEFAULT, 1, 0)
-	, ('Today 15:00', DEFAULT, 1, 0)
-	, ('Today 15:30', DEFAULT, 1, 0)
-	, ('Today 16:00', DEFAULT, 1, 0);
+INSERT INTO bookings (booking_name, start_date, booking_group) VALUES
+	  ('Today 12:00', DEFAULT, 1,)
+	, ('Today 12:30', DEFAULT, 1,)
+	, ('Today 13:00', DEFAULT, 1,)
+	, ('Today 13:30', DEFAULT, 1,)
+	, ('Today 14:00', DEFAULT, 1,)
+        , ('Today 14:30', DEFAULT, 1,)
+	, ('Today 15:00', DEFAULT, 1,)
+	, ('Today 15:30', DEFAULT, 1,)
+	, ('Today 16:00', DEFAULT, 1,);
 
 
 
