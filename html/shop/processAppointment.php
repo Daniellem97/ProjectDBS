@@ -45,7 +45,7 @@ if ($conn->connect_error) {
 
 $BookingIds = $_POST["booking_Id"];
 $BookingNames = $_POST["BookingName"];
-$quantitys = $_POST["itemQuantity"];
+$quantitys = $_POST["Quantity"];
 $start_date = $_POST["AppointmentDate"];
 $totalAmount = 0.00;
 $amounts = 1;
