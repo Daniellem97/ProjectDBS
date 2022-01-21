@@ -93,7 +93,6 @@ if ($numOfItems > 0) {
 	echo '<form id="orderForm" action="processAppointment.php" method="post" >';
         echo '<form id="orderForm" action="processAppointment.php" method="post" onsubmit="return updateQuantitys()">';
 	
-	echo '<br> <br> <input type="Reset" value="Reset Order" class="button" onclick="resetForm()">';
 
 	
 	$previousBookingGroupNumber = 0;
