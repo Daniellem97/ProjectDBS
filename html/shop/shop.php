@@ -112,7 +112,7 @@ if ($numOfItems > 0) {
 	    echo '					<input type="hidden" name="BookingName[]" value="' . $row["booking_name"] . '">';
 	    echo '					<div class="center">';
             echo '					<br>';
- 	    echo '						Quantity: <input name="quantitys[]" type="number" min="0" max="1" value="0" maxlength="1" onchange="updateQuantity(' . $row["id"] . ', this.value, ' . $quantitys . ')">';
+ 	    echo '						Quantity: <input name="quantitys[]" type="number" min="0" max="1" value="0" maxlength="1" onchange="updateQuantity(' . $row["id"] . ', this.value, ' . $id . ')">';
  	    echo '					<br>';
 	    echo '					<br>';
 	    echo '                 <input type="Submit" value="Confirm Appointment" class="button">';
