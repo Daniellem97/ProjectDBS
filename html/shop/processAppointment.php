@@ -72,7 +72,7 @@ $conn->close();
 echo '<div>';
 echo '<p>';
 echo '<b>Booking: ' . $BookingNames . '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Date: ' . substr($currentTimeStamp, 0, 10)
-. '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Time: ' . substr($currentTimeStamp, 11, 8) . '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Total Amount: ' . $currency . number_format($totalAmount, 2) . '</b>';
+. '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Time that booking was made: ' . substr($currentTimeStamp, 11, 8) . '</b>';
 echo '</p>';
 echo '<table style="width: 80%">';
 echo '<tr>';
