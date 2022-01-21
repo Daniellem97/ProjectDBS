@@ -61,10 +61,7 @@ for ($i = 0; $i < sizeof($amounts); $i++) {
 
 // Insert ORDER row.
 
-date_default_timezone_set($timeZone);
-// date_default_timezone_set("America/New_York");
-// date_default_timezone_set("America/Los_Angeles");
-// date_default_timezone_set("Europe/London");
+date_default_timezone_set("Europe/London");
 
 $currentTimeStamp = date('Y-m-d H:i:s');
 
