@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
@@ -22,7 +23,6 @@
 		<a href="tutorial.php">Tutorials</a>
 		<a href="orderHistory.php">Order History</a>
 	</div>
-
 <?php
 // Create a connection to the database.
 $conn = new mysqli($db_url, $db_user, $db_password, $db_name);
@@ -69,7 +69,6 @@ if ($numOfItems > 0) {
 	    echo '			</div>';
 	    echo '		</div>';
 	}
-
 	echo '<div>';
 	echo '	<p class="center">';
 	echo '		Order Total: ' . $currency . '<span id="orderTotal"></span>';
@@ -90,6 +89,7 @@ $result = $conn->query($sql);
 $numOfItems = $result->num_rows;
 if ($numOfItems > 0) {
     // Display each returned item in a form.
+	echo '<form id="orderForm" action="processAppointment.php" method="post" onsubmit="return validateOrder()">';
 	echo '<form id="orderForm" action="processAppointment.php" method="post" >';
 	$previousBookingGroupNumber = 0;
 	// output data of each row
@@ -107,12 +107,11 @@ if ($numOfItems > 0) {
 	    echo '			<div class="card">';
 	    echo '				<div class="container">';
 	    echo '					<h2 class="bookingTitle">' . $row["booking_name"] . '</h2>';
-            echo '					<p class="center">' . $currency . $price . '</p>';
 	    echo '					<br>';
 	    echo 					"This appointment is for " . date("Y/m/d") . "<br>";
 	    echo '					<input type="hidden" name="bookings_Id[]" value="' . $row["id"] . '">';
+	    echo '					<input type="hidden" name="bprice[]" value="' . $row["bprice"] . '">';
 	    echo '					<input type="hidden" name="BookingName[]" value="' . $row["booking_name"] . '">';
-	    echo '					<input type="hidden" name="price[]" value=' . $price . '>';
 	    echo '					<div class="center">';
             echo '					<br>';
  	    echo '						Quantity: <input name="quantitys[]" type="number" min="0" max="1" value="0" maxlength="1" onchange="updateTotal(' . $row["id"] . ', this.value, ' . $price . ')">';
@@ -125,7 +124,6 @@ if ($numOfItems > 0) {
 	    echo '			</div>';
 	    echo '		</div>';
 	}
-
 	echo '<div>';
 	echo '	<p class="center">';
 	echo '	</p>';
@@ -143,32 +141,23 @@ $conn->close();
 		<h5>&copy; 2021, Danielle Murphy. 10553937 All rights reserved.</h5>
 	</div>
 	<script>
-
 		document.getElementById("orderTotal").innerHTML = "0.00";
 <?php
     echo 'var itemTotals = new Array(' . $numOfItems . ');'
 ?>
-
 		var i;
 		for (i = 0; i < itemTotals.length; i++) {
 			itemTotals[i]=0.00;
 		}
-
-
 		function calculateOrderTotal() {
-
 			var orderTotal = 0.00;
-
 			var i;
 			for (i = 0; i < itemTotals.length; i++) {
 				orderTotal += itemTotals[i];
 			}
 			return orderTotal;
 		}
-
-
 		function resetForm() {
-
 			document.getElementById("orderForm").reset();
 			document.getElementById("orderTotal").innerHTML = "0.00";
 			var i;
@@ -176,20 +165,21 @@ $conn->close();
 			  itemTotals[i] = 0.00;
 			}
 		}
-
-
 		function updateTotal(itemNo, quantity, price) {
-
 			var amount = quantity * price;
 			itemTotals[itemNo] = amount;
-
 			var totalAmount = calculateOrderTotal().toFixed(2);
 			document.getElementById("orderTotal").innerHTML = totalAmount;
-
 		}
 
 
-	
+		function validateOrder() {
+
+			if (calculateOrderTotal() <= 0.0) {
+				alert('Please select at least one item to buy.');
+				return false;
+			}
+
 		}
 	</script>
 
