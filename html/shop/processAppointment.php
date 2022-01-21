@@ -35,7 +35,7 @@ if ($conn->connect_error) {
 }
 // Get order information from submitted form.
 $BookingIds = $_POST["booking_Id"];
-$BookingNames = $_POST["booking_Name"];
+$BookingNames = $_POST["BookingName"];
 $quantities = $_POST["quantity"];
 $start_date = $_POST["AppointmentDate"];
 $totalAmount = 0.00;
@@ -44,7 +44,7 @@ date_default_timezone_set("Europe/London");
 
 $currentTimeStamp = date('Y-m-d H:i:s');
 
-$sql = "INSERT INTO `appointment` (booking_name) VALUES ('$booking_Name')";
+$sql = "INSERT INTO `appointment` (booking_name) VALUES ('$BookingNames')";
 
 if ($conn->query($sql) === TRUE) {
     $orderNumber = $conn->insert_id;
@@ -71,12 +71,11 @@ $conn->close();
 <?php
 echo '<div>';
 echo '<p>';
-echo '<b>Booking: ' . $booking_Name . '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Date: ' . substr($currentTimeStamp, 0, 10)
+echo '<b>Booking: ' . $BookingNames . '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Date: ' . substr($currentTimeStamp, 0, 10)
 . '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Time: ' . substr($currentTimeStamp, 11, 8) . '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Total Amount: ' . $currency . number_format($totalAmount, 2) . '</b>';
 echo '</p>';
 echo '<table style="width: 80%">';
 echo '<tr>';
-echo '<th>Booking</th>';
 echo '</tr>';
 for ($i = 0; $i < sizeof($amounts); $i++) {
     if ($amounts[$i] != 0.00) {
