@@ -6,7 +6,7 @@ CREATE DATABASE shop_db;
 
 USE shop_db;
 
-/* Create PRODUCT_GROUP table. */
+/* Create PRODUCT_GROUP table.. */
 
 CREATE TABLE product_group (
   product_group_number INT(3) NOT NULL PRIMARY KEY,
