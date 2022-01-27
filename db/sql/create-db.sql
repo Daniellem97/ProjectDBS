@@ -79,8 +79,7 @@ INSERT INTO booking_group (booking_group_number, booking_group_name) VALUES
 
 CREATE TABLE bookings (
   bookings_id INT(3) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  booking_name VARCHAR(40) NOT NULL DEFAULT '',
-  bprice INT (1) NOT NULL,	
+  booking_name VARCHAR(40) NOT NULL DEFAULT '',	
   start_date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   booking_group INT(2) NOT NULL DEFAULT 1,
   FOREIGN KEY (booking_group) REFERENCES booking_group (booking_group_number)
