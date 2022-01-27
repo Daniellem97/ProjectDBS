@@ -89,17 +89,15 @@ CREATE TABLE bookings (
 /* INSERT initialization data into the BOOKINGS table. */
 
 INSERT INTO bookings (booking_name, start_date, booking_group) VALUES
-	  ('Today 12:00', DEFAULT, 1,)
-	, ('Today 12:30', DEFAULT, 1,)
-	, ('Today 13:00', DEFAULT, 1,)
-	, ('Today 13:30', DEFAULT, 1,)
-	, ('Today 14:00', DEFAULT, 1,)
-        , ('Today 14:30', DEFAULT, 1,)
-	, ('Today 15:00', DEFAULT, 1,)
-	, ('Today 15:30', DEFAULT, 1,)
-	, ('Today 16:00', DEFAULT, 1,);
-
-
+	  ('Today 12:00', DEFAULT, 1)
+	, ('Today 12:30', DEFAULT, 1)
+	, ('Today 13:00', DEFAULT, 1)
+	, ('Today 13:30', DEFAULT, 1)
+	, ('Today 14:00', DEFAULT, 1)
+        , ('Today 14:30', DEFAULT, 1)
+	, ('Today 15:00', DEFAULT, 1)
+	, ('Today 15:30', DEFAULT, 1)
+	, ('Today 16:00', DEFAULT, 1);
 
 
 CREATE TABLE `appointment` (
